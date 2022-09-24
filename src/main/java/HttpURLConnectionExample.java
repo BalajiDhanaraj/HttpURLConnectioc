@@ -53,14 +53,27 @@ public class HttpURLConnectionExample {
         OutputStream outputStream = connection.getOutputStream();
         outputStream.write(inputjson);
 
+        System.out.println("Response code"+connection.getResponseCode());
+        System.out.println("Message "+connection.getResponseMessage());
 
+        InputStream inputStream = connection.getInputStream();
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String lines;
+        StringBuffer buffer = new StringBuffer();
+
+        while((lines = bufferedReader.readLine())!=null){
+            buffer.append(lines);
+        }
+        System.out.println(buffer);
     }
 
     public static void main(String[] args) throws IOException {
 
         HttpURLConnectionExample connectionExample = new HttpURLConnectionExample();
-        connectionExample.GetMethod();
-
+        //connectionExample.GetMethod();
+        connectionExample.PostMethod();
 
 
     }
