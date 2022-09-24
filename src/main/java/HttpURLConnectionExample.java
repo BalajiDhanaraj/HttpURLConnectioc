@@ -19,4 +19,12 @@ public class HttpURLConnectionExample {
 
     }
 
+    public static void main(String[] args) throws IOException {
+
+        HttpURLConnectionExample connectionExample = new HttpURLConnectionExample();
+        connectionExample.GetMethod();
+
+
+
+    }
 }
