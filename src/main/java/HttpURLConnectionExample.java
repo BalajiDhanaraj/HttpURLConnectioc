@@ -11,7 +11,7 @@ public class HttpURLConnectionExample {
 
         URL uri = new URL("https://dummy.restapiexample.com/api/v1/employees");
         HttpURLConnection connection = (HttpURLConnection) uri.openConnection();
-        connection.setRequestMethod("Get");
+        connection.setRequestMethod("GET");
         connection.connect();
 
         int statusCode = connection.getResponseCode();
