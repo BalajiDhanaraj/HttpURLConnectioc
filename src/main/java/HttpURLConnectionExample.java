@@ -10,7 +10,6 @@ public class HttpURLConnectionExample {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.connect();
-
         int statusCode = connection.getResponseCode();
         System.out.println("Status code is "+statusCode);
 
