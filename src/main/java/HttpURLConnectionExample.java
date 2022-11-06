@@ -41,7 +41,7 @@ public class HttpURLConnectionExample {
         connection.setRequestProperty("Content-Type","application/json");
         // we want to send out the output to the url so we have to set as TRUE, by default it will in FALSE
         connection.setDoOutput(true);
-        // escaping the string is " \"name\" "
+        /////// escaping the string is " \"name\" "
         String json = "{\"name\":\"Balai\",\"salary\":\"55000\",\"age\":\"23\"}";
 
         byte[] inputjson = json.getBytes();
