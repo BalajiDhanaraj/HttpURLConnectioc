@@ -37,7 +37,7 @@ public class HttpURLConnectionExample {
         URL url = new URL("https://dummy.restapiexample.com/api/v1/create");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
-        /// in postman --> post request header section --> they is key, value --> so our send request context is --> content-type, application/json like (key, values pair)
+        //////// in postman --> post request header section --> they is key, value --> so our send request context is --> content-type, application/json like (key, values pair)
         connection.setRequestProperty("Content-Type","application/json");
         /////// we want to send out the output to the url so we have to set as TRUE, by default it will in FALSE
         connection.setDoOutput(true);
